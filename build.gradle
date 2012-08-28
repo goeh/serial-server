@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin:'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   compile 'org.rxtx:rxtx:2.1.7'
+   //compile fileTree(dir: "lib", include: "*.jar")
+}
+
+//tasks.withType(Compile) {
+//    options.compilerArgs << "-Xlint:unchecked"
+//}
+
+defaultTasks 'clean', 'distZip'
+
+sourceCompatibility = 1.5
+version = '1.1'
+mainClassName = 'se.technipelago.serial.SerialServer'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Serial Server', 'Implementation-Version': version, 'Main-Class' : mainClassName
+    }
+}

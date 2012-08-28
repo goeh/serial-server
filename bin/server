@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+export JAVA_HOME=/usr/lib/jvm/jdk1.6.0
+export SERIAL_HOME=/home/weather/serialserver
+
+cd $SERIAL_HOME
+
+stty -F /dev/ttyS0 9600 sane clocal crtscts -hupcl -icrnl -opost -onlcr
+
+$JAVA_HOME/bin/java -Djava.library.path=$SERIAL_HOME/jni/rxtx -classpath $SERIAL_HOME/dist/serialserver.jar:$SERIAL_HOME/lib/RXTXcomm.jar se.technipelago.serial.SerialServer /dev/ttyS0 2000 8888

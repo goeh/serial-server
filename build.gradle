@@ -6,8 +6,8 @@ repositories {
 }
 
 dependencies {
-   compile 'org.rxtx:rxtx:2.1.7'
-   //compile fileTree(dir: "lib", include: "*.jar")
+   //compile 'org.rxtx:rxtx:2.1.7'
+   compile fileTree(dir: "lib", include: "*.jar")
 }
 
 //tasks.withType(Compile) {

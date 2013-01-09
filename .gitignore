@@ -1,0 +1,11 @@
+# Ignore Intellij IDEA files
+.idea
+*.iml
+
+.gradle
+
+# Ignore build artifacts
+build
+out
+manifest.mf
+rxtx

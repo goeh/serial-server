@@ -2,12 +2,18 @@
 
 This little RS-232 <-> TCP/IP proxy written in Java was developed by me to be able to pull data from a weater station (Davis Vantage Pro2) connected to the serial (RS-232) port on a Ubuntu Linux server. The service has been running 24x7x365 since 2008 and is still running, collecting data every 10 minutes.
 
+## Build
+
+    ./gradlew
+    
 ## Prerequisites for running serialserver on Ubuntu
+
 ### librxtxSerial.so from RXTX lib is required.
 
     sudo apt-get install librxtx-java
 
 ## Device permissions.
+
 ### Make sure the user has rw permissions on the device.
 
     $ ls -l /dev/ttyS0
